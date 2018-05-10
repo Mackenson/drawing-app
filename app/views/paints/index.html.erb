@@ -1,0 +1,7 @@
+<% @paints.each do |paint| %>
+  <p> <%= paint.title %> </p>
+  <img src= <%= paint.photo.url %> width="200px" />
+  <%= link_to "deleted", paints_path(paint.id), :method=> :delete %>
+  <%= link_to 'show', paints_path(paint.id)%>
+  <%= link_to "edit", edit_paint_path(paint.id) %>
+<% end %>
