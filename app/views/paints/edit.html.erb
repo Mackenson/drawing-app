@@ -1,0 +1,24 @@
+<% if current_user %>
+	<h1>Edit Paint!</h1>
+
+	<div class="submitted-reviews">
+		<%= form_for (@paints) do |f| %>
+
+		<%= f.label :title, 'Title' %>
+		<%= f.text_field :title %>
+
+		<%= f.label :description, 'Description' %>
+		<%= f.text_field :description %>
+
+		<%= f.label :category, 'Category' %>
+		<%= f.text_field :category %>
+
+    <%= f.label :photo%>
+    <%= f.file_field :photo %>
+
+		<%= f.submit 'Edit Paint!' %>
+		<% end  %>
+	</div>
+<% else %>
+	<h1>Please sign in to add a new place!</h1>
+<% end %>
