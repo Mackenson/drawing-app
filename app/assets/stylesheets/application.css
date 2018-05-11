@@ -15,6 +15,13 @@
  *= require foundation_and_overrides
 
  */
+ body{
+   background:#D8DBC9;
+   margin:0 auto;
+   padding:0;
+   position:relative;
+ }
+
  .form {
     width: auto;
     margin: 5% 15%;
@@ -24,9 +31,11 @@
     background-color: rgba(223, 241, 253, 0.6);
     font-size: 12px;
   }
+
  .fas{
    font-size: 30rem;
  }
+
  label{
    font-size: 1.5rem;
    color: black;
@@ -41,9 +50,83 @@
  list-style-type: none;
  color: red;
  }
- body{
-   background:#D8DBC9;
-   margin:0 auto;
-   padding:0;
-   position:relative;
- }
+
+.top-bar{
+  background-color: #879dad;
+  font-family: Arial,Sans-Serif;
+  color: white;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  opacity: 0.7;
+  padding: 0;
+}
+
+ul li{
+  float: left;
+  width: 200px;
+  height: 12%px;
+  background: grey;
+   margin-left: 2px;
+}
+
+ul li a{
+  text-decoration: none;
+  display: block;
+}
+
+ul li a:hover{
+  background: green;
+}
+
+ul li ul li{
+  display: none;
+}
+
+ul li:hover ul li{
+  display: block;
+}
+
+.container{
+  margin: 15% auto;
+  width: 1500px;
+  height: 50%;
+  position: relative;
+}
+
+#content{
+  position: relative;
+  background-color: #7B9172;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 25px 0;
+  text-align: center;
+  font-family: Sans-Serif,Arial;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 20px -12px 20px 2px #8B9C63;
+  border: 1px solid #c4c6ca;
+}
+#content:before,
+#content:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 0 #8B9C63 inset;
+  border: 1px solid #c4c6ca;
+  background-color: #7B9172;
+  top: 0;
+  left: 0;
+}
+#content:before{
+  transform: rotate(2deg);
+  z-index:-1;
+}
+#content:after{
+  transform: rotate(-3deg);
+  z-index:-2;
+}
