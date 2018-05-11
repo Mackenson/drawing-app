@@ -15,3 +15,35 @@
  *= require foundation_and_overrides
 
  */
+ .form {
+    width: auto;
+    margin: 5% 15%;
+    padding: 2% 5%;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgba(223, 241, 253, 0.6);
+    font-size: 12px;
+  }
+ .fas{
+   font-size: 30rem;
+ }
+ label{
+   font-size: 1.5rem;
+   color: black;
+ }
+
+ input {
+ font-size: 28px;
+ border-radius: 10px;
+ }
+
+ #error_explanation ul li{
+ list-style-type: none;
+ color: red;
+ }
+ body{
+   background:#D8DBC9;
+   margin:0 auto;
+   padding:0;
+   position:relative;
+ }
