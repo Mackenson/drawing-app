@@ -67,9 +67,9 @@ ul{
 ul li{
   float: left;
   width: 200px;
-  height: 12%px;
+  height: 12%;
   background: grey;
-   margin-left: 2px;
+  margin-left: 2px;
 }
 
 ul li a{
@@ -129,4 +129,55 @@ ul li:hover ul li{
 #content:after{
   transform: rotate(-3deg);
   z-index:-2;
+}
+
+/* img{
+  width: 20%;
+  display: block;
+  float: left;
+  padding-left: 1%;
+  padding-top: 2%;
+} */
+button{
+  margin-top: 5px;
+  left: 20px;
+}
+button a{
+  color: black;
+}
+#first-video-box{
+  background-image: url("images/painting-cloud.jpg");
+  background-repeat: no-repeat;
+  width: auto;
+  background-size: cover;
+  height: 400px;
+  margin-bottom: 3%;
+}
+#second-video-box{
+  width: 800px;
+  height: 500px;
+  background-color: rgba(224, 229, 201, 0.4);
+  border-radius: 20%;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 15px 15px 25px;
+  display: inline-block;
+}
+#header-bckg{
+  background-image: url("images/wood-paint.jpg");
+  background-repeat: no-repeat;
+  width: auto;
+  background-size: cover;
+  height: 400px;
+  margin-bottom: 3%;
+}
+
+#paint-box{
+  width: auto;
+  height: auto;
+  border-radius: 20%;
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 30%;
+  display: inline-block;
 }

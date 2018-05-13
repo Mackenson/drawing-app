@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :email, presence: :true, uniqueness: { case_sensitive: false }
 
   has_many :paints
+  has_many :reviews
 end
