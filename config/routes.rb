@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     resources :paints, only: [:index, :new, :create, :edit, :show ,:destroy] do
   end
 
+  resources :videos, only: [:index]
 end
