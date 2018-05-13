@@ -130,3 +130,28 @@ ul li:hover ul li{
   transform: rotate(-3deg);
   z-index:-2;
 }
+img{
+  width: 850px;
+  height: 750px;
+  margin-bottom:4%;
+  position: absolute;
+  left: 175px;
+  bottom: 200px;
+
+}
+#photo-box{
+  background-color: lightgrey;
+  width: 1200px;
+  height: 1200px;
+  margin-bottom:4%;
+  position: relative;
+  left: 400px;
+}
+
+.box-title{
+  text-align: center;
+  position: relative;
+  top: 40px;
+  font-size: 50px;
+
+}

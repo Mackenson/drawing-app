@@ -3,7 +3,7 @@
   	<h1>Edit Paint!</h1>
 
   	<div class="submitted-reviews">
-  		<%= form_for (@paints) do |f| %>
+  		<%= form_for [@paints] do |f| %>
 
   		<%= f.label :title, 'Title' %>
   		<%= f.text_field :title %>
