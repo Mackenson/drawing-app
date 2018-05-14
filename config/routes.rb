@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   #   end
 
     resources :paints, only: [:index, :new, :create,:update, :edit, :show, :destroy] do
+      resources :reviews, only: [:new, :create]
   end
 
   resources :videos, only: [:index]

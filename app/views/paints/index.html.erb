@@ -1,7 +1,11 @@
+<header id="header-bckg"></header>
+
 <% @paints.each do |paint| %>
-  <p> <%= paint.title %> </p>
-  <img src= <%= paint.photo.url %> width="200px" />
-  <%= link_to "deleted", paints_path(paint.id), :method=> :delete %>
-  <%= link_to 'show', paints_path(paint.id)%>
-  <%= link_to "edit", edit_paint_path(paint.id) %>
+  <div id="paint-box">
+  <img src= <%= paint.photo.url %>  width="500px" height="500px"/>
+  <button><%= link_to "deleted", paint_path(paint.id), :method=> :delete %></button>
+  <button><%= link_to 'show', paint_path(paint.id)%></button>
+  <button><%= link_to "edit", edit_paint_path(paint.id) %></button>
+  <button><%= link_to "Add review", new_paint_review_path(paint.id) %></button>
+</div>
 <% end %>

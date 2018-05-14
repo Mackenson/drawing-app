@@ -1,5 +1,6 @@
 class PaintsController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
+
   def index
     render json: Paint.all
   end
@@ -40,9 +41,9 @@ class PaintsController < ApplicationController
   end
 
   def destroy
-    @paints = Paint.find(params[:id])
-    @paints.destroy
-    redirect_to paint_path(@paints)
+    @paint = Paint.find(params[:id])
+    @paint.destroy
+    redirect_to paint_path
   end
 
 

@@ -22,7 +22,6 @@ class UserIndex extends React.Component {
       })
       .then(response => response.json())
       .then(body => {
-        console.log(body);
         this.setState({
           paints: body
         });

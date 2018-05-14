@@ -7,5 +7,6 @@ class Paint < ApplicationRecord
   validates :photo, presence: true
 
   belongs_to :user
+  has_many :reviews
   mount_uploader :photo, PhotoUploader
 end
