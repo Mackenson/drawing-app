@@ -181,3 +181,11 @@ button a{
   margin-left: 30%;
   display: inline-block;
 }
+#photo-box{
+  text-align: center;
+  width: 1000px;
+  height: 600px;
+  display: inline-block;
+  position: relative;
+  left: 430px;
+}

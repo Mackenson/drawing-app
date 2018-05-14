@@ -10,7 +10,7 @@ class UserIndex extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/paints.json')
+    fetch('api/v1/paints.json')
       .then(response => {
         if (response.ok) {
           return response;
@@ -34,6 +34,7 @@ class UserIndex extends React.Component {
     let paints = this.state.paints.map((paint)=>{
       return(
         <PaintInfo
+          key={paint.id}
           title={paint.title}
           photo={paint.photo.url}
         />
