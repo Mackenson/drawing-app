@@ -2,9 +2,8 @@ class PaintsController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def index
-    @paints = Paint.all
+    render json: Paint.all
   end
-
   def new
     @paints = Paint.new
   end

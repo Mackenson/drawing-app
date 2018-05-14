@@ -1,5 +1,6 @@
 import React from 'react';
-// import Cart from '../components/Cart';
+import PaintInfo from '../components/PaintInfo';
+
 class UserIndex extends React.Component {
   constructor(props){
     super(props)
@@ -30,14 +31,14 @@ class UserIndex extends React.Component {
 
   render(){
     console.log(this.state.paints);
-    // debugger
     let paints = this.state.paints.map((paint)=>{
       return(
-        <img  src={paint.photo.url} />
-
+        <PaintInfo
+          title={paint.title}
+          photo={paint.photo.url}
+        />
       )
     })
-
     return(
       <div>
         {paints}
