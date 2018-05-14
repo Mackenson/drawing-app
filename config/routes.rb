@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   namespace :api do
       namespace :v1 do
         resources :paints do
+          resources :reviews
         end
       end
     end
 
     resources :paints, only: [:index, :new, :create,:update, :edit, :show, :destroy] do
-      resources :reviews, only: [:new, :create]
+      resources :reviews, only: [:index, :new, :create]
   end
 
   resources :videos, only: [:index]

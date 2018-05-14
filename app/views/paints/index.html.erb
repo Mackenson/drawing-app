@@ -6,6 +6,5 @@
   <button><%= link_to "deleted", paint_path(paint.id), :method=> :delete %></button>
   <button><%= link_to 'show', paint_path(paint.id)%></button>
   <button><%= link_to "edit", edit_paint_path(paint.id) %></button>
-  <button><%= link_to "Add review", new_paint_review_path(paint.id) %></button>
 </div>
 <% end %>

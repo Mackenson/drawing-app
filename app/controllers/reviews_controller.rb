@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
 
   def create
     @paints = Paint.find(params[:paint_id])
-    @reviews = Review.new(reviews_params)
+    @reviews = Review.new(reviews_params,  user_id: current_user.id)
     @reviews.user = current_user
     @reviews.paint = @paints
       if @reviews.save

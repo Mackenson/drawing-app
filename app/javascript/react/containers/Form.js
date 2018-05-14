@@ -49,7 +49,7 @@ class Form extends Component {
       title: this.state.reviewTitle,
       body: this.state.reviewBody,
       rating: this.state.reviewRating,
-      place_id: this.props.placeId,
+      paint_id: this.props.paintId,
       user_id: this.props.userId
     }
     this.props.addNewReview(formPayload)

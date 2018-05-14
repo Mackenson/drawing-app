@@ -20,7 +20,7 @@ class ContainersForm extends Component {
 
   componentDidMount() {
     let paintId = this.state.paintId
-    fetch(`/api/v1/paint/${paintId}`, {
+    fetch(`/api/v1/paints/${paintId}/`,{
       credentials: 'same-origin'
     })
       .then(response => {
@@ -51,6 +51,7 @@ class ContainersForm extends Component {
       credentials: 'same-origin',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
+
     .then(response => response.json())
     .then(body => {
       this.setState ({
@@ -66,6 +67,7 @@ class ContainersForm extends Component {
   }
 
   render () {
+    // debugger
     let reviews = this.state.reviews.map((review) => {
       return(
         <Review
@@ -80,7 +82,7 @@ class ContainersForm extends Component {
 
     let photos;
 
-    if(this.state.paint.avatar) {
+    if(this.state.paint.photo) {
       photos = <img src={this.state.paint.photo.url} />
     }
 
@@ -88,7 +90,7 @@ class ContainersForm extends Component {
     if (this.state.userId){
       form = <Form
               addNewReview={this.addNewReview}
-              paintId={this.state.paint.id}
+              paintId={this.state.paintId}
               userId={this.state.userId}
             />
     }else{
@@ -97,17 +99,14 @@ class ContainersForm extends Component {
 
     return(
       <div>
-        <h2>{this.state.paint.name}</h2>
+        <h2>{this.state.paint.title}</h2>
         <div className="clearfix">
           <div className="photos clearfix">
             <p>{photos}</p>
           </div>
           <div className="paint-info">
             <ul>
-              <li className="address">Location:</li>
-            <li>{this.state.paint.street_address}</li>
-              <li className="description">Description:</li>
-            <li>{this.state.paint.description}</li>
+              <li className="description">Description: {this.state.paint.description}</li>
             </ul>
           </div>
         </div>
