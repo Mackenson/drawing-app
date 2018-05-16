@@ -4,6 +4,11 @@ class Api::V1::PaintsController < ApplicationController
     render json: Paint.all
   end
 
+  def show
+    # binding.pry
+    render json: { paint: Paint.find(params[:id]), user_id: current_user, reviews: Review.where(paint_id: params[:id]) }
+  end
+
   def new
     @paints = Paint.new
   end
@@ -12,7 +17,7 @@ class Api::V1::PaintsController < ApplicationController
     @paints = Paint.new(paints_params)
     @paints.user = current_user
       if @paints.save
-        flash[:notice] = "Place added successfully"
+        flash[:notice] = "Paint added successfully"
         redirect_to "/paints"
 
       else
@@ -21,9 +26,6 @@ class Api::V1::PaintsController < ApplicationController
       end
   end
 
-  def show
-    @paints = Paint.find(params[:id])
-  end
 
   def edit
     @paints = Paint.find(params[:id])

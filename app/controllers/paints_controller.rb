@@ -12,7 +12,7 @@ class PaintsController < ApplicationController
     @paints = Paint.new(paints_params)
     @paints.user = current_user
       if @paints.save
-        flash[:notice] = "Place added successfully"
+        flash[:notice] = "Paint added successfully"
         redirect_to "/paints"
 
       else
