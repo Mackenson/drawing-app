@@ -18,9 +18,9 @@ const Review = (props) => {
   return (
     <div>
       <strong><div>{props.title}</div></strong>
-      <div>Rating: {rating}</div>
-      <div>Date Submitted: {props.date}</div>
-      <div>Description: {props.body}</div><br></br>
+      <div>Description: {props.body}</div>
+      <div>Rating: {rating}</div><br></br>
+    
     </div>
   )
 }

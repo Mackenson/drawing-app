@@ -79,14 +79,10 @@ class UserIndex extends React.Component {
      )
    })
   return(
-    <div className = "wrp-page">
-      <div className="index-category">
+    <div>
+      <div id="header-bckg">
       </div>
-      <div className="index-list">
-      <ul className="paint-tile">
-          {paints}
-        </ul>
-      </div>
+      {paints}
     </div>
   )
 }
