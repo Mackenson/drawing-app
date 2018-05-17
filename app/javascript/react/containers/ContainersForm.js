@@ -74,7 +74,6 @@ class ContainersForm extends Component {
           key={review.id}
           title={review.title}
           rating={review.rating}
-          date={review.created_at}
           body={review.body}
         />
       )
@@ -83,7 +82,7 @@ class ContainersForm extends Component {
     let photos;
 
     if(this.state.paint.photo) {
-      photos = <img src={this.state.paint.photo.url} />
+      photos = <img src={this.state.paint.photo.url} className="review-photo" />
     }
 
     let form;
