@@ -182,7 +182,9 @@ button a{
   display: inline-block;
 }
 #header-bckg{
-  background-image: url("app/images/wood-paint.jpg");
+  // background-image: url("wood-paint.jpg");
+  background-image: asset-url("wood-paint.jpg");
+  // background-image: image-url("wood-paint.jpg");
   background-repeat: no-repeat;
   width: auto;
   background-size: cover;
