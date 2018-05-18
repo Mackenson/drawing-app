@@ -72,8 +72,11 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+<<<<<<< HEAD
+=======
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+>>>>>>> 934f1c07c8bfe007d329f0bed0ef2a2792e820f4
     dotenv (2.4.0)
     dotenv-rails (2.4.0)
       dotenv (= 2.4.0)

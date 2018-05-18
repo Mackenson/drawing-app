@@ -19,6 +19,7 @@
 /storage/*
 /node_modules
 /yarn-error.log
+.env
 
 /public/assets
 .byebug_history

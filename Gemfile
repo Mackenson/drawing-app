@@ -35,7 +35,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'sqlite3'
 
 group :development, :test do
-  gem "dotenv-rails"
+gem "dotenv-rails"
 end
 
 group :development do
