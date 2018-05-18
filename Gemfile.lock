@@ -72,11 +72,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
-<<<<<<< HEAD
-=======
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
->>>>>>> 934f1c07c8bfe007d329f0bed0ef2a2792e820f4
     dotenv (2.4.0)
     dotenv-rails (2.4.0)
       dotenv (= 2.4.0)
@@ -124,7 +121,7 @@ GEM
       fog-xml (~> 0.1.1)
       ipaddress (~> 0.5)
       json (~> 2.0)
-    fog-aliyun (0.2.1)
+    fog-aliyun (0.2.2)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       ipaddress (~> 0.8)
@@ -232,7 +229,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (2.1.1)
+    fog-vsphere (2.2.0)
       fog-core
       rbvmomi (~> 1.9)
     fog-xenserver (0.3.0)
