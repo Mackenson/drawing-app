@@ -4,6 +4,7 @@ class PaintsController < ApplicationController
   def index
     @paints = Paint.all
   end
+
   def new
     @paints = Paint.new
   end
@@ -14,7 +15,6 @@ class PaintsController < ApplicationController
       if @paints.save
         flash[:notice] = "Paint added successfully"
         redirect_to "/paints"
-
       else
         flash[:notice] = @paints.errors.full_messages.join(", ")
         render :new
@@ -33,7 +33,7 @@ class PaintsController < ApplicationController
       @paints = Paint.find(params[:id])
     if @paints.update_attributes(paints_params)
       flash[:notice] = "Your form has been submited"
-      redirect_to paint_path
+      redirect_to "/paints"
     else
       flash[:alert] = "You made an errors filling the form"
       render :edit
@@ -41,9 +41,9 @@ class PaintsController < ApplicationController
   end
 
   def destroy
-    @paint = Paint.find(params[:id])
-    @paint.destroy
-    redirect_to paint_path
+    @paints = Paint.find(params[:id])
+    @paints.destroy
+    redirect_to paints_path
   end
 
 
