@@ -81,6 +81,9 @@ class UserIndex extends React.Component {
   return(
     <div>
       <div id="header-bckg">
+        <div id="text-photo">
+          <h1>Welcome to Boston Painting</h1>
+        </div>
       </div>
       {paints}
     </div>

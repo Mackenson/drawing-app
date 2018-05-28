@@ -183,15 +183,18 @@ button a{
 }
 #header-bckg{
   // background-image: url("wood-paint.jpg");
-  background-image: asset-url("wood-paint.jpg");
+  background-image: asset-url("owls-2.jpg");
   // background-image: image-url("wood-paint.jpg");
   background-repeat: no-repeat;
   width: auto;
   background-size: cover;
-  height: 400px;
+  height: 500px;
   margin-bottom: 3%;
 }
-
+#text-photo{
+  text-align: center;
+  font-size: 50px;
+}
 #paint-box{
   width: 35%;
   height: 40%;

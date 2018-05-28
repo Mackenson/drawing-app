@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BostonPainting</title>
+  <title>Boston Painting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag    'application' %>
-  <%= javascript_include_tag "vendor/modernizr" %>
-<%= csrf_meta_tags %>
 
-  <%= csrf_meta_tags %>
 </head>
 <body>
 
@@ -31,7 +25,7 @@
         <%- if current_user -%>
           <li><%= link_to 'Tutorial', videos_path %></li>
           <li><%= link_to 'Paints', paints_path %></li>
-          <li><%= link_to 'Add Paint', new_paint_path %></li>
+          <li><%= link_to 'Add a Painting', new_paint_path %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
