@@ -42,8 +42,14 @@ class PaintsController < ApplicationController
 
   def destroy
     @paints = Paint.find(params[:id])
+    if !current_user.nil?
+      if current_user.is_admin? || current_user == @paints.user
     @paints.destroy
+      else
+        flash[:alert] =  "Only the owner can delele this painting"
     redirect_to paints_path
+      end
+    end
   end
 
 
