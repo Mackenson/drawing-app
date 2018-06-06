@@ -140,13 +140,10 @@ ul li:hover ul li{
   z-index:-2;
 }
 
-/* img{
-  width: 20%;
-  display: block;
-  float: left;
-  padding-left: 1%;
-  padding-top: 2%;
-} */
+img{
+  width: 90%;
+  height: 600px;
+}
 .rb{
   margin-top: 5px;
   left: 27%;
@@ -187,7 +184,7 @@ button a{
   width: auto;
   background-size: cover;
   height: 500px;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 #text-photo{
   text-align: center;
@@ -197,16 +194,18 @@ button a{
   width: 35%;
   height: 40%;
   padding-top: 3%;
-  margin-left: 2%;
+  margin-left: 10%;
   display: inline-block;
 }
+
+
 #photo-box{
   text-align: center;
   width: 40%;
-  height: auto;
+  max-height: 100%;
   display: inline-block;
   float: left;
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 .review-form{
