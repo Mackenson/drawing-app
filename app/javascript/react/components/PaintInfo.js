@@ -6,8 +6,11 @@ const PaintInfo = (props) => {
   return (
     <div>
       <div id="photo-box">
-        <h3 className="box-title">{props.title}</h3>
-        <img src={props.photo} />
+        <div id="box">
+          <h3 className="box-title">{props.title}</h3>
+          <span className="hover"><img src={props.photo} /></span>
+          <span className="back">{props.description}</span>
+        </div>
         <button>
           <Link to={`/paints/${props.id}`} >
           Add Review
