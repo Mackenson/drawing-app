@@ -66,6 +66,7 @@ class UserIndex extends React.Component {
        <div className="paint-tile-items" key = {paint.id}>
        <Paint
           name = {paint.title}
+          body={paint.body}
           onClick = {handle}
          />
        <PaintInfo
