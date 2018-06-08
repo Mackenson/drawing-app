@@ -141,18 +141,18 @@ ul li:hover ul li{
 }
 
 img{
-  width: 90%;
-  height: 600px;
+  width: 75%;
+  height: 550px;
 }
 .rb{
   margin-top: 5px;
-  left: 27%;
+  left: 17%;
   font-size: 30px;
   font-weight: bold;
 }
 
 button{
-  margin-top: 5px;
+  margin-top: 0px;
   font-size: 30px;
   font-weight: bold;
 }
@@ -193,7 +193,7 @@ button a{
 #paint-box{
   width: 35%;
   height: 40%;
-  padding-top: 3%;
+  padding-top: 1%;
   margin-left: 10%;
   display: inline-block;
 }
@@ -201,11 +201,11 @@ button a{
 
 #photo-box{
   text-align: center;
-  width: 40%;
+  width: 50%;
   max-height: 100%;
   display: inline-block;
   float: left;
-  margin-left: 7%;
+  margin-right: 15%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
@@ -223,7 +223,7 @@ button a{
   transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
   background: #a88300;
-  
+
 }
 
 .back {
@@ -258,4 +258,12 @@ h2{
   background: #5f6350;
   margin-left: 25%;
   color: #fff;
+}
+#left{
+  width: 20%;
+  height: 100%;
+}
+.right{
+  width: 78%;
+  height: 100%;
 }
