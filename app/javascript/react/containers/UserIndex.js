@@ -1,6 +1,7 @@
 import React from 'react';
 import PaintInfo from '../components/PaintInfo';
 import Paint from '../components/Paint';
+import Weather from './Weather';
 
 class UserIndex extends React.Component {
   constructor(props){
@@ -76,6 +77,7 @@ class UserIndex extends React.Component {
            id={paint.id}
            link={paint.title}
           />
+        <Weather />
        </div>
      )
    })
