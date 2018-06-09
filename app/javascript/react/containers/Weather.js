@@ -1,5 +1,5 @@
 import React from 'react';
-import PaintInfo from '../components/PaintInfo';
+import Temp from '../components/Temp';
 class Weather extends React.Component {
   constructor(props){
     super(props);
@@ -29,11 +29,12 @@ class Weather extends React.Component {
   }
 
   render(){
-    let temperature = this.state.temps.map((temp)=>{
+    console.log(this.state.temps);
+    let temperature = this.state.temps.map((temp, i)=>{
       return(
-        <div>
-          <PaintInfo
-            temp_f={temp.temp_f}
+        <div key={i}>
+          <Temp
+            temp={temp.temp_f}
           />
         </div>
       )

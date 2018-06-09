@@ -183,8 +183,8 @@ button a{
   background-repeat: no-repeat;
   width: auto;
   background-size: cover;
-  height: 500px;
-  margin-bottom: 1%;
+  height: 535px;
+  margin-bottom: 0;
 }
 #text-photo{
   text-align: center;
@@ -261,7 +261,11 @@ h2{
 }
 #left{
   width: 20%;
-  height: 100%;
+  height: 8000px;
+  background-color: #c9ceb7;
+  position: absolute;
+  text-align: center;
+  margin-top: 0;
 }
 .right{
   width: 78%;
