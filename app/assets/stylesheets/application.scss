@@ -271,3 +271,24 @@ h2{
   width: 78%;
   height: 100%;
 }
+
+.temp{
+  font-size: 40px;
+  font-weight: bold;
+}
+#api{
+  padding-top: 10%;
+}
+.fas {
+  font-size: 3rem;
+  color: yellow;
+}
+
+.fa, .fas {
+  font-weight: 100;
+}
+.fa-sun:before {
+    position: relative;
+    bottom: 75px;
+    left: 85px;
+}
