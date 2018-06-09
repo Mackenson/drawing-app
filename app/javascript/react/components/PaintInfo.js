@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const PaintInfo = (props) => {
+  console.log(props);
   return (
     <div>
       <div id="photo-box" className="right">
@@ -15,12 +16,6 @@ const PaintInfo = (props) => {
           Add Review
           </Link>
         </button>
-      </div>
-      <div id="left">
-        <h1>Today's Weather</h1>
-        <p>
-          {props.temp_f}
-        </p>
       </div>
   </div>
   );
