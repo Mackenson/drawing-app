@@ -9,7 +9,7 @@ class Weather extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://api.wunderground.com/api/34c7152940073e33/conditions/q/CA/San_Francisco.json')
+    fetch('http://api.wunderground.com/api/34c7152940073e33/conditions/q/MA/Boston.json')
       .then(response => {
         if (response.ok) {
           return response;
@@ -21,6 +21,7 @@ class Weather extends React.Component {
       })
       .then(response => response.json())
       .then(body => {
+        console.log(body);
         this.setState({
           temps: this.state.temps.concat(body.current_observation)
         });
@@ -35,6 +36,7 @@ class Weather extends React.Component {
         <div key={i}>
           <Temp
             temp={temp.temp_f}
+            icon={temp.icon_url}
           />
         </div>
       )

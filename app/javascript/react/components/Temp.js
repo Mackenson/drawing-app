@@ -6,7 +6,8 @@ const Temp = (props) => {
     <div id="left">
       <div id="api">
         <h1>Weather </h1>
-      <p className="temp">{props.temp}</p> <i className="fas fa-sun"></i>
+        <img id="icon" src={props.icon} />
+        <p className="temp">{props.temp}</p>
       </div>
     </div>
   );
