@@ -21,7 +21,6 @@ class Weather extends React.Component {
       })
       .then(response => response.json())
       .then(body => {
-        console.log(body);
         this.setState({
           temps: this.state.temps.concat(body.current_observation)
         });
@@ -30,7 +29,6 @@ class Weather extends React.Component {
   }
 
   render(){
-    console.log(this.state.temps);
     let temperature = this.state.temps.map((temp, i)=>{
       return(
         <div key={i}>
