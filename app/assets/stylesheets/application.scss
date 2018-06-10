@@ -140,7 +140,7 @@ ul li:hover ul li{
   z-index:-2;
 }
 
-img{
+#paint-img{
   width: 75%;
   height: 550px;
 }
@@ -222,7 +222,7 @@ button a{
 #photo-box:hover #box {
   transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
-  background: #a88300;
+  background: #9aa083;
 
 }
 
@@ -261,7 +261,6 @@ h2{
 }
 #left{
   width: 20%;
-  height: 8000px;
   background-color: #c9ceb7;
   position: absolute;
   text-align: center;
@@ -291,4 +290,8 @@ h2{
     position: relative;
     bottom: 75px;
     left: 85px;
+}
+
+img #icon{
+  max-width: 3rem;
 }

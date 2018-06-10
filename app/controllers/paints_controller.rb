@@ -47,7 +47,7 @@ class PaintsController < ApplicationController
     @paints.destroy
       else
         flash[:alert] =  "Only the owner can delele this painting"
-    redirect_to paints_path
+    redirect_to paint_path
       end
     end
   end
