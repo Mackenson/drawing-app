@@ -1,15 +1,15 @@
 import React from 'react';
-import Temp from '../components/Temp';
-class Weather extends React.Component {
+import Meets from '../components/Meets';
+class Meetup extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      temps: []
+      meets: []
     }
   }
 
   componentDidMount() {
-    fetch('http://api.wunderground.com/api/34c7152940073e33/conditions/q/MA/Boston.json')
+    fetch('/api/v1/meetups.json')
       .then(response => {
         if (response.ok) {
           return response;
@@ -21,27 +21,24 @@ class Weather extends React.Component {
       })
       .then(response => response.json())
       .then(body => {
-        this.setState({
-          temps: this.state.temps.concat(body.current_observation)
-        });
+        console.log(body);
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render(){
-    let temperature = this.state.temps.map((temp, i)=>{
+    let meets = this.state.meets.map((meet, i)=>{
       return(
         <div key={i}>
-          <Temp
-            temp={temp.temp_f}
-            icon={temp.icon_url}
+          <Meet
+
           />
         </div>
       )
     })
     return(
-      <div>{temperature}</div>
+      <div>{meets}</div>
     )
     }
   }
-export default Weather
+export default Meetup

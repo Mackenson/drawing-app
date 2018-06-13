@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Temp = (props) => {
-  console.log(props);
   return (
     <div id="left">
       <div id="api">
