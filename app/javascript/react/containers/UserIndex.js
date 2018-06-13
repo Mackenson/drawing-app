@@ -2,6 +2,7 @@ import React from 'react';
 import PaintInfo from '../components/PaintInfo';
 import Paint from '../components/Paint';
 import Weather from './Weather';
+import Meetup from './Meetup';
 
 class UserIndex extends React.Component {
   constructor(props){
@@ -64,21 +65,22 @@ class UserIndex extends React.Component {
     let handle = () => {this.handleClick(paint.id)}
 
      return(
-       <div className="paint-tile-items" key = {paint.id}>
-       <Paint
-          name = {paint.title}
-          body={paint.body}
-          onClick = {handle}
-         />
-       <PaintInfo
-           title={paint.title}
-           photo={paint.photo.url}
-           description={paint.body}
-           id={paint.id}
-           link={paint.title}
-          />
-        <Weather />
-       </div>
+         <div className="paint-tile-items" key = {paint.id}>
+           <Paint
+              name = {paint.title}
+              body={paint.body}
+              onClick = {handle}
+             />
+           <PaintInfo
+               title={paint.title}
+               photo={paint.photo.url}
+               description={paint.body}
+               id={paint.id}
+               link={paint.title}
+              />
+              <Weather />
+              <Meetup />
+         </div>
      )
    })
   return(
