@@ -1,10 +1,10 @@
 import React from 'react';
-import PaintInfo from '../components/PaintInfo';
+import Info from '../components/Info';
 import Paint from '../components/Paint';
 import Weather from './Weather';
 import Meetup from './Meetup';
 
-class UserIndex extends React.Component {
+class User extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -71,7 +71,7 @@ class UserIndex extends React.Component {
               body={paint.body}
               onClick = {handle}
              />
-           <PaintInfo
+           <Info
                title={paint.title}
                photo={paint.photo.url}
                description={paint.body}
@@ -96,4 +96,4 @@ class UserIndex extends React.Component {
 }
 }
 
-export default UserIndex;
+export default User;

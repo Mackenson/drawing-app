@@ -1,11 +1,10 @@
 import React from 'react';
 
 const Meets = (props) => {
+  console.log(props);
   return (
-    <div id="left">
-      <div id="api">
-        <h1>Meet up </h1>
-      </div>
+    <div >
+      <h1>Meet Up</h1>
     </div>
   );
 }

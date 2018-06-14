@@ -1,5 +1,6 @@
 import React from 'react';
 import Meets from '../components/Meets';
+
 class Meetup extends React.Component {
   constructor(props){
     super(props);
@@ -21,7 +22,9 @@ class Meetup extends React.Component {
       })
       .then(response => response.json())
       .then(body => {
-        console.log(body);
+        this.setState({
+          meets: this.state.meets.concat(body["data"])
+        })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -30,8 +33,10 @@ class Meetup extends React.Component {
     let meets = this.state.meets.map((meet, i)=>{
       return(
         <div key={i}>
-          <Meet
-
+          <Meets
+            name={meet.name}
+            link={meet.link}
+            description={meet.description}
           />
         </div>
       )

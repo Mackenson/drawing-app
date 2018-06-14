@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const PaintInfo = (props) => {
-  console.log(props);
+const Info = (props) => {
   return (
     <div>
       <div id="photo-box" className="right">
@@ -21,4 +20,4 @@ const PaintInfo = (props) => {
   );
 }
 
-export default PaintInfo;
+export default Info;

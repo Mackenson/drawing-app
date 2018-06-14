@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
-import UserIndex from './UserIndex';
-import ContainersForm from './ContainersForm';
+import User from './User';
+import PaintsForm from './PaintsForm';
 
 const App = (props) => {
   return (
     <Router history={browserHistory}>
-    <Route path='/' component={UserIndex} />
-    <Route path='/paints' component={UserIndex} />
-    <Route path='/paints/:id' component={ContainersForm} />
+      <Route path='/' component={User} />
+      <Route path='/paints' component={User} />
+      <Route path='/paints/:id' component={PaintsForm} />
     </Router>
   );
 }
