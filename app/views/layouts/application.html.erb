@@ -23,6 +23,7 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
+          <li><%= link_to 'Meet Up', api_v1_meetups_path %></li>
           <li><%= link_to 'Tutorial', videos_path %></li>
           <li><%= link_to 'Paints', paints_path %></li>
           <li><%= link_to 'Add a Painting', new_paint_path %></li>

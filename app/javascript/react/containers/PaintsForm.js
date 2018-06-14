@@ -4,7 +4,7 @@ import Form from './Form';
 import Dropzone from 'react-dropzone'
 
 
-class ContainersForm extends Component {
+class PaintsForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -119,4 +119,4 @@ class ContainersForm extends Component {
   }
 }
 
-export default ContainersForm;
+export default PaintsForm;
