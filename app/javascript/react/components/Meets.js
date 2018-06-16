@@ -1,10 +1,9 @@
 import React from 'react';
 
 const Meets = (props) => {
-  console.log(props);
   return (
-    <div >
-      <h1>Meet Up</h1>
+    <div>
+      <h3>{props.name}</h3>
     </div>
   );
 }
