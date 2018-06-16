@@ -42,7 +42,11 @@ class Meetup extends React.Component {
       )
     })
     return(
-      <div>{meets}</div>
+
+      <div>
+        <h1>Meet Up</h1>
+        {meets}
+      </div>
     )
     }
   }

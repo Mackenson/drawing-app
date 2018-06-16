@@ -259,7 +259,7 @@ h2{
   margin-left: 25%;
   color: #fff;
 }
-#left{
+.left{
   width: 20%;
   background-color: #c9ceb7;
   position: absolute;
@@ -275,10 +275,18 @@ h2{
   font-size: 40px;
   font-weight: bold;
 }
-#api{
+.api{
   padding-top: 10%;
 }
 
 img #icon{
   max-width: 3rem;
+}
+.meet{
+  width: 20%;
+  top: 5%;
+  background-color: #c9ceb7;
+  // position: absolute;
+  text-align: center;
+  margin-top: 0;
 }

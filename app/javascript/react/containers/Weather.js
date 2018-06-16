@@ -40,7 +40,12 @@ class Weather extends React.Component {
       )
     })
     return(
-      <div>{temperature}</div>
+      <div className="left">
+        <div className="api">
+          <h1>Weather</h1>
+          {temperature}
+        </div>
+      </div>
     )
     }
   }
