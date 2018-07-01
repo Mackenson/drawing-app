@@ -4,15 +4,13 @@ import Paint from '../components/Paint';
 import Weather from './Weather';
 import Meetup from './Meetup';
 
-class User extends React.Component {
+class Paints extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      paints: [],
       paintSelected: null,
       paintsShown: []
     }
-  // this.sortPaints = this.sortPaints.bind(this)
   this.handleClick = this.handleClick.bind(this)
   }
   componentDidMount() {
@@ -29,7 +27,6 @@ class User extends React.Component {
       .then(response => response.json())
       .then(body => {
         this.setState({
-          paints: body,
           paintsShown: body
         });
       })
@@ -44,23 +41,13 @@ class User extends React.Component {
     }
   }
 
-  // sortPaints(event){
-  //   let selectedCategory = this.state.paints.filter((paint) => {
-  //     return (
-  //       parseInt(paint.category) == event.target.value
-  //     )
-  //   })
-  //   this.setState({ paintsShown: selectedCategory })
-  // }
-
  render(){
    let paints = this.state.paintsShown.map((paint)=>{
-     let paintDescrip, paintId, paintlink;
+     let paintDescrip, paintId;
 
      if (paint.id === this.state.paintSelected){
         paintDescrip = <div className="tile-descrip">{paint.body}</div>
         paintId = paint.id
-        paintlink = <div className="tile-link">Click here for reviews and more details on {paint.title}.</div>
       }
     let handle = () => {this.handleClick(paint.id)}
 
@@ -96,4 +83,4 @@ class User extends React.Component {
 }
 }
 
-export default User;
+export default Paints;

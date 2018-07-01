@@ -4,7 +4,7 @@ const Paint = props => {
   return (
     <div onClick={props.onClick}>
       <h3>{props.title}</h3>
-  </div>
+    </div>
   )
 }
 

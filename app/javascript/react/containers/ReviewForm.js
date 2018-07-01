@@ -5,7 +5,7 @@ import BodyField from '../components/BodyField';
 import RatingField from '../components/RatingField';
 
 
-class Form extends Component {
+class ReviewForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -82,4 +82,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default ReviewForm;

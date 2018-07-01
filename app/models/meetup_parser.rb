@@ -8,7 +8,6 @@ class MeetupParser
 
   def search
     response = HTTParty.get("https://api.meetup.com/find/events?&topic_category=drawing&key=#{ENV["MEETUP_KEY"]}")
-    # binding.pry
     meetup_data = response.each do |meet|
     new_hash = {
       name: meet["name"],
