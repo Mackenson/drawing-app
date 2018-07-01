@@ -43,7 +43,7 @@ class Meetup extends React.Component {
     })
     return(
 
-      <div>
+      <div className="meet">
         <h1>Meet Up</h1>
         {meets}
       </div>

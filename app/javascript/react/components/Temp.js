@@ -5,6 +5,7 @@ const Temp = (props) => {
     <div>
       <img id="icon" src={props.icon} />
       <p className="temp">{props.temp}</p>
+      <img src={props.image} />
     </div>
   );
 }

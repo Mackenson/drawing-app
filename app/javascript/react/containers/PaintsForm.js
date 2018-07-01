@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Review from '../components/Review';
-import Form from './Form';
+import ReviewForm from './ReviewForm';
 import Dropzone from 'react-dropzone'
 
 
@@ -11,11 +11,9 @@ class PaintsForm extends Component {
       paint: {},
       reviews: [],
       userId: '',
-      paintId: this.props.params.id,
-      file: []
+      paintId: this.props.params.id
     }
     this.addNewReview = this.addNewReview.bind(this);
-    this.onDrop = this.onDrop.bind(this);
   }
 
   componentDidMount() {
@@ -60,14 +58,7 @@ class PaintsForm extends Component {
     })
   }
 
-
-  onDrop(event) {
-    let picture = event.target.value
-      this.setState({ file: picture })
-  }
-
   render () {
-    // debugger
     let reviews = this.state.reviews.map((review) => {
       return(
         <Review
@@ -87,7 +78,7 @@ class PaintsForm extends Component {
 
     let form;
     if (this.state.userId){
-      form = <Form
+      form = <ReviewForm
               addNewReview={this.addNewReview}
               paintId={this.state.paintId}
               userId={this.state.userId}

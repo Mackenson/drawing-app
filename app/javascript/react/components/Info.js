@@ -12,7 +12,7 @@ const Info = (props) => {
         </div>
         <button>
           <Link to={`/paints/${props.id}`} >
-          Add Review
+            Add Review
           </Link>
         </button>
       </div>

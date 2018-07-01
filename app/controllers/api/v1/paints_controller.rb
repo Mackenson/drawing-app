@@ -5,7 +5,6 @@ class Api::V1::PaintsController < ApplicationController
   end
 
   def show
-    # binding.pry
     render json: { paint: Paint.find(params[:id]), user_id: current_user, reviews: Review.where(paint_id: params[:id]) }
   end
 
