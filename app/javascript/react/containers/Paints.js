@@ -53,20 +53,23 @@ class Paints extends React.Component {
 
      return(
          <div className="paint-tile-items" key = {paint.id}>
-           <Paint
+           <div>
+             <Paint
               name = {paint.title}
               body={paint.body}
               onClick = {handle}
-             />
-           <Info
+              />
+           </div>
+           <div>
+             <Info
                title={paint.title}
                photo={paint.photo.url}
                description={paint.body}
                id={paint.id}
                link={paint.title}
               />
-              <Weather />
-              <Meetup />
+          </div>
+            <Weather />
          </div>
      )
    })

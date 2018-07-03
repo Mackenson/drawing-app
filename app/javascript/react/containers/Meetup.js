@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Meets from '../components/Meets';
 
 class Meetup extends React.Component {
@@ -10,7 +10,7 @@ class Meetup extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/meetups.json')
+    fetch('/meetups.json')
       .then(response => {
         if (response.ok) {
           return response;
@@ -30,6 +30,7 @@ class Meetup extends React.Component {
   }
 
   render(){
+    console.log(this.state.meets);
     let meets = this.state.meets.map((meet, i)=>{
       return(
         <div key={i}>

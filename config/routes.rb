@@ -11,12 +11,11 @@ Rails.application.routes.draw do
     end
 
     resources :paints, only: [:index, :new, :create, :update, :edit, :show, :destroy] do
-      resources :reviews, only: [:index, :new, :create]
   end
 
   namespace :api do
     namespace :v1 do
-      resources :meetups, only: [:index]
+      resources :meetups
     end
 end
 
