@@ -10,7 +10,7 @@ const App = (props) => {
       <Route path='/' component={Paints} />
       <Route path='/paints' component={Paints} />
       <Route path='/paints/:id' component={PaintsForm} />
-      <Route path='/meetup' component={Meetup} />
+    <Route path='/api/v1/meetups' component={Meetup} />
     </Router>
   );
 }
