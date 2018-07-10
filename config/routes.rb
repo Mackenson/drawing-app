@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :meetups
+      resources :meetups, only: [:index]
     end
 end
 

@@ -10,7 +10,7 @@ class Meetup extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/meetups.json')
+    fetch('/api/v1/meetups.json')
       .then(response => {
         if (response.ok) {
           return response;
@@ -30,7 +30,6 @@ class Meetup extends React.Component {
   }
 
   render(){
-    console.log(this.state.meets);
     let meets = this.state.meets.map((meet, i)=>{
       return(
         <div key={i}>
