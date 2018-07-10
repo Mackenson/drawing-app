@@ -283,9 +283,8 @@ img #icon{
   max-width: 3rem;
 }
 .meet{
-  width: 20%;
   background-color: #c3d4bf;
-  padding-top: 15%;
+  padding-top: 5%;
   text-align: center;
   margin-top: 0;
 }
@@ -293,4 +292,21 @@ img #icon{
   background-color: #b2d65a;
   font-size: 30px;
   height: 160px;
+}
+.button.radius {
+    border-radius: 3px;
+    width: 350px;
+    height: 80px;
+    margin-top: 20px;
+    background: #b5bc91;
+  }
+.button-meet {
+    color: #000;
+    line-height: inherit;
+    text-decoration: none;
+    font-size: 50px;
+}
+#meet-hide{
+  background-color: #a7af7e;
+  height: 60px;
 }

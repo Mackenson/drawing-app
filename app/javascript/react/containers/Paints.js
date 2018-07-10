@@ -3,6 +3,7 @@ import Info from '../components/Info';
 import Paint from '../components/Paint';
 import Weather from './Weather';
 import Meetup from './Meetup';
+import { Link } from 'react-router';
 
 class Paints extends React.Component {
   constructor(props){
@@ -79,6 +80,9 @@ class Paints extends React.Component {
         <div id="text-photo">
           <h1>Welcome to Boston Painting</h1>
         </div>
+      </div>
+      <div className="button radius">
+        <Link to='/meetups' className="button-meet">Meetup</Link>
       </div>
       {paints}
     </div>
