@@ -9,10 +9,10 @@ class Paints extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      paintSelected: null,
-      paintsShown: []
+      meet: null,
+      paints: []
     }
-  this.handleClick = this.handleClick.bind(this)
+  this.handle = this.handle.bind(this)
   }
   componentDidMount() {
     fetch('/api/v1/paints.json')
@@ -28,29 +28,29 @@ class Paints extends React.Component {
       .then(response => response.json())
       .then(body => {
         this.setState({
-          paintsShown: body
+          paints: body
         });
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
 
-  handleClick(id){
-    if (this.state.paintSelected === null){
-      this.setState({paintSelected: id})
+  handle(id){
+    if (this.state.meet === null){
+      this.setState({meet: id})
     } else {
-      this.setState({paintSelected: null})
+      this.setState({meet: null})
     }
   }
 
  render(){
-   let paints = this.state.paintsShown.map((paint)=>{
-     let paintDescrip, paintId;
+   let paints = this.state.paints.map((paint)=>{
+     let description, Id;
 
-     if (paint.id === this.state.paintSelected){
-        paintDescrip = <div className="tile-descrip">{paint.body}</div>
+     if (paint.id === this.state.meet){
+        descrip = <div>{paint.body}</div>
         paintId = paint.id
       }
-    let handle = () => {this.handleClick(paint.id)}
+    let handle = () => {this.handle(paint.id)}
 
      return(
          <div className="paint-tile-items" key = {paint.id}>
