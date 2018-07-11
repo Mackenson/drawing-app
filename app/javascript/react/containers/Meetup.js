@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Meets from '../components/Meets';
+import MeetDetails from '../components/MeetDetails';
 
 class Meetup extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      meets: []
+      meets: [],
+      dropdown: []
     }
   }
 
@@ -29,15 +31,38 @@ class Meetup extends React.Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+  handle(id){
+      if (this.state.dropdown === null){
+        this.setState({dropdown: id})
+      } else {
+        this.setState({dropdown: null})
+      }
+    }
+
   render(){
     let meets = this.state.meets.map((meet, i)=>{
+
+      let description, Id, link;
+
+      if (meet.id === this.state.dropdown){
+         description = <div>{meet.description}</div>
+         Id = meet.id
+         link = <div>Click here for more details on {meet.name}.</div>
+       }
+     let handle = () => {this.handle(meet.id)}
+
       return(
         <div key={i}>
           <Meets
             name={meet.name}
-            link={meet.link}
-            description={meet.description}
+            click={handle}
           />
+
+        <MeetDetails
+          link={meet.link}
+          description={meet.description}
+        />
+
         </div>
       )
     })
