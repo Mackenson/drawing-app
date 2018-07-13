@@ -7,8 +7,9 @@ class Meetup extends React.Component {
     super(props);
     this.state = {
       meets: [],
-      dropdown: []
+      dropdown: null
     }
+    this.handle = this.handle.bind(this)
   }
 
   componentDidMount() {
@@ -45,8 +46,7 @@ class Meetup extends React.Component {
       let description, Id, link;
 
       if (meet.id === this.state.dropdown){
-         description = <div>{meet.description}</div>
-         Id = meet.id
+         description = <p>{meet.description}</p>
          link = <div>Click here for more details on {meet.name}.</div>
        }
      let handle = () => {this.handle(meet.id)}
