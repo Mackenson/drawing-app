@@ -219,20 +219,24 @@ button a{
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
-#photo-box:hover #box {
-  transform: rotateY(180deg);
-  box-shadow: -5px 5px 5px #aaa;
-  background: #9aa083;
+// #photo-box:hover #box {
+//   transform: rotateY(180deg);
+//   box-shadow: -5px 5px 5px #aaa;
+//   background: #9aa083;
+//
+// }
 
-}
+// .back {
+//   display: block;
+//   transform: rotateY(180deg);
+//   box-sizing: border-box;
+//   padding: 10px;
+//   color: white;
+//   text-align: center;
+// }
 
-.back {
-  display: block;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  text-align: center;
+#fuck{
+  display: none;
 }
 .review-form{
   width: 80%;
@@ -309,4 +313,33 @@ img #icon{
 #meet-hide{
   background-color: #a7af7e;
   height: 60px;
+}
+
+// /////// all mobile //////
+@media (min-width: 310px) and (max-width: 700px) {
+.top-bar{
+  content: "\f0c9";
+  font-family: FontAwesome;
+  display: none;
+}
+
+#mobile-nav{
+  display: block !important;
+}
+
+#mobile-nav .fas{
+  font-size: 2rem;
+}
+
+#header-bckg{
+  height: 200px;
+}
+
+.button.radius{
+  display: none;
+}
+
+.left{
+  display: none;
+}
 }
