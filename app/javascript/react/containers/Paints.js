@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'
 import Info from '../components/Info';
 import Paint from '../components/Paint';
 import Weather from './Weather';
@@ -12,7 +13,6 @@ class Paints extends React.Component {
       meet: null,
       paints: []
     }
-  this.handle = this.handle.bind(this)
   }
   componentDidMount() {
     fetch('/api/v1/paints.json')
@@ -30,27 +30,18 @@ class Paints extends React.Component {
         this.setState({
           paints: body
         });
+        console.log(body);
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
 
-  handle(id){
-    if (this.state.meet === null){
-      this.setState({meet: id})
-    } else {
-      this.setState({meet: null})
-    }
-  }
-
  render(){
    let paints = this.state.paints.map((paint)=>{
      let description, Id;
-
      if (paint.id === this.state.meet){
         descrip = <div>{paint.body}</div>
         paintId = paint.id
       }
-    let handle = () => {this.handle(paint.id)}
 
      return(
          <div className="paint-tile-items" key = {paint.id}>
@@ -58,9 +49,9 @@ class Paints extends React.Component {
              <Paint
               name = {paint.title}
               body={paint.body}
-              onClick = {handle}
               />
            </div>
+
            <div>
              <Info
                title={paint.title}
@@ -76,6 +67,9 @@ class Paints extends React.Component {
    })
   return(
     <div>
+      <div id="mobile-nav" style={{display: "none"}}>
+        <i className="fas fa-bars"></i>
+      </div>
       <div id="header-bckg">
         <div id="text-photo">
           <h1>Welcome to Boston Painting</h1>
@@ -89,5 +83,6 @@ class Paints extends React.Component {
   )
 }
 }
+
 
 export default Paints;

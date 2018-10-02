@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+import $ from 'jquery';
 
 const Info = (props) => {
   return (
-    <div>
       <div id="photo-box" className="right">
         <div id="box">
           <h3 className="box-title">{props.title}</h3>
@@ -16,8 +16,8 @@ const Info = (props) => {
           </Link>
         </button>
       </div>
-  </div>
   );
+
 }
 
 export default Info;
