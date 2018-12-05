@@ -10,10 +10,21 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require foundation
-//= require activestorage
-//= require_tree .
+// = require jquery
+// = require jquery_ujs
+// = require foundation
+// = require activestorage
+// = require_tree .
 
 $(function(){ $(document).foundation(); });
+var div = $('#img').hide(),
+  news = ['news1', 'news2', 'news3'],
+  count = 0;
+
+function changeNews() {
+  div.fadeIn(3000).delay(3000).fadeOut(3000, function() {
+      changeNews();
+  }).text(news[count++]);
+}
+
+changeNews();

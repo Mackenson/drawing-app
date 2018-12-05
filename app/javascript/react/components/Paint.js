@@ -1,9 +1,11 @@
 import React from 'react';
+import '../../../assets/stylesheets/componentPaint.css'
 
 const Paint = props => {
+  console.log(props.photo);
   return (
     <div>
-      <h3>{props.title}</h3>
+      <img  id="img" src={props.photo} />
     </div>
   )
 }
