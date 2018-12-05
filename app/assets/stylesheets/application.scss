@@ -178,18 +178,7 @@ button a{
   margin: 0 2% 10% 10%;
   display: inline-block;
 }
-#header-bckg{
-  background-image: asset-url("owls-2.jpg");
-  background-repeat: no-repeat;
-  width: auto;
-  background-size: cover;
-  height: 535px;
-  margin-bottom: 0;
-}
-#text-photo{
-  text-align: center;
-  font-size: 50px;
-}
+
 #paint-box{
   width: 35%;
   height: 40%;
@@ -318,9 +307,19 @@ img #icon{
 // /////// all mobile //////
 @media (min-width: 310px) and (max-width: 700px) {
 .top-bar{
-  content: "\f0c9";
-  font-family: FontAwesome;
+  height: 16rem;
   display: none;
+}
+
+.top-bar-section ul li {
+    width: 24rem;
+    text-align: center;
+}
+
+.name{
+  background: #333333;
+  width: 24rem;
+  text-align: center;
 }
 
 #mobile-nav{
@@ -333,6 +332,7 @@ img #icon{
 
 #header-bckg{
   height: 200px;
+  // display: block;
 }
 
 .button.radius{
@@ -342,4 +342,21 @@ img #icon{
 .left{
   display: none;
 }
+
+#paint-img{
+  width: 300px !important;
+  height: 200px;
+  margin-left: -6rem;
+}
+
+button{
+  margin-top: 5px;
+  font-size: 10px;
+  margin-left: -6rem;
+}
+
+.box-title{
+  margin-right: 6rem;
+}
+
 }

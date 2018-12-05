@@ -5,6 +5,7 @@ import Paint from '../components/Paint';
 import Weather from './Weather';
 import Meetup from './Meetup';
 import { Link } from 'react-router';
+import '../../../assets/stylesheets/paint.css'
 
 class Paints extends React.Component {
   constructor(props){
@@ -34,22 +35,20 @@ class Paints extends React.Component {
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
+    componentDidMount() {
+    this.handleClick();
+  }
 
  render(){
    let paints = this.state.paints.map((paint)=>{
-     let description, Id;
-     if (paint.id === this.state.meet){
-        descrip = <div>{paint.body}</div>
-        paintId = paint.id
-      }
 
      return(
          <div className="paint-tile-items" key = {paint.id}>
-           <div>
+           <div id="header-bckg">
              <Paint
               name = {paint.title}
-              body={paint.body}
-              />
+              photo= {paint.photo.url}
+            />
            </div>
 
            <div>
@@ -61,23 +60,11 @@ class Paints extends React.Component {
                link={paint.title}
               />
           </div>
-            <Weather />
          </div>
      )
    })
   return(
     <div>
-      <div id="mobile-nav" style={{display: "none"}}>
-        <i className="fas fa-bars"></i>
-      </div>
-      <div id="header-bckg">
-        <div id="text-photo">
-          <h1>Welcome to Boston Painting</h1>
-        </div>
-      </div>
-      <div className="button radius">
-        <Link to='/meetups' className="button-meet">Meetup</Link>
-      </div>
       {paints}
     </div>
   )
