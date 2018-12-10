@@ -1,0 +1,39 @@
+.video-fullscreen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.video-fullscreen video{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@keyframes fader {
+  0%{
+    background-image: asset-url('nature.jpg');
+    background-size: cover;
+  }
+  50%{
+    background-image: asset-url('owls-2.jpg');
+    background-size: cover;
+  }
+  100%{
+    background-image: asset-url('wood-paint.jpg');
+    background-size: cover;
+  }
+}
+
+#form-overlay{
+  animation: fader 35s linear infinite;
+  height: 1085px;
+  width: 100vw;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  // background: #2b4250;
+  z-index: 1;
+  opacity: 0.85;
+}

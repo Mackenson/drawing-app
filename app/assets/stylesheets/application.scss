@@ -190,11 +190,10 @@ button a{
 
 #photo-box{
   text-align: center;
-  width: 50%;
+  width: 50vw;
   max-height: 100%;
   display: inline-block;
   float: left;
-  margin-right: 15%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
@@ -208,25 +207,7 @@ button a{
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
-// #photo-box:hover #box {
-//   transform: rotateY(180deg);
-//   box-shadow: -5px 5px 5px #aaa;
-//   background: #9aa083;
-//
-// }
 
-// .back {
-//   display: block;
-//   transform: rotateY(180deg);
-//   box-sizing: border-box;
-//   padding: 10px;
-//   color: white;
-//   text-align: center;
-// }
-
-#fuck{
-  display: none;
-}
 .review-form{
   width: 80%;
   margin: 0 8%;
