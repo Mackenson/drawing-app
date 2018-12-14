@@ -1,5 +1,18 @@
 import React from 'react';
 import '../../../assets/stylesheets/home.scss'
+import Particles from 'react-particles-js'
+
+const animationOpt = {
+  particles:{
+    number:{
+      value: 150,
+      density:{
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+}
 
 class Home extends React.Component {
   constructor(props) {
@@ -9,9 +22,12 @@ class Home extends React.Component {
     }
   }
   render(){
+    $('[rel=nav-bar]').hide()
     return(
-      <div id='form-overlay'>
-
+      <div id='home'>
+        <Particles
+          params={animationOpt}
+          />
       </div>
     )
   }
