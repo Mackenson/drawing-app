@@ -3,7 +3,22 @@ import $ from 'jquery'
 import Info from '../components/Info';
 import Paint from '../components/Paint';
 import { Link } from 'react-router';
-import '../../../assets/stylesheets/paint.css'
+import '../../../assets/stylesheets/paint.scss'
+import Particles from 'react-particles-js'
+
+
+const animationOpt = {
+  particles:{
+    number:{
+      value: 150,
+      density:{
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+}
+
 
 class Paints extends React.Component {
   constructor(props){
@@ -37,12 +52,6 @@ class Paints extends React.Component {
    let paints = this.state.paints.map((paint)=>{
      return(
          <div className="paint-tile-items" key = {paint.id}>
-           <div >
-             <Paint
-              photo= {paint.photo.url}
-              name = {paint.title}
-            />
-           </div>
 
            <div>
              <Info
@@ -57,8 +66,15 @@ class Paints extends React.Component {
      )
      })
   return(
+    <div>
     <div id="header-bckg">
       {paints}
+    </div>
+    <div id='home-paint'>
+      <Particles
+        params={animationOpt}
+      />
+    </div>
     </div>
   )
 }
