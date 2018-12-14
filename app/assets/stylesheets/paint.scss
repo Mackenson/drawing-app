@@ -1,0 +1,39 @@
+@keyframes fader {
+  0%{
+    background-image: asset-url('nature.jpg');
+    background-size: cover;
+  }
+  50%{
+    background-image: asset-url('owls-2.jpg');
+    background-size: cover;
+  }
+  100%{
+    background-image: asset-url('wood-paint.jpg');
+    background-size: cover;
+  }
+}
+
+#home-paint{
+  background: #4a4e3a !important;
+  width: auto;
+  height: auto;
+}
+
+canvas{
+  position: absolute;
+}
+
+#header-bckg{
+  animation: fader 35s linear infinite;
+  background-repeat: no-repeat;
+  width: auto;
+  background-size: cover;
+  height: 535px;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+ #text-photo{
+  text-align: center;
+  font-size: 50px;
+}
