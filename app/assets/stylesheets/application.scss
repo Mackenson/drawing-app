@@ -145,8 +145,8 @@ ul li:hover ul li{
   height: 550px;
 }
 .rb{
-  margin-top: 5px;
-  left: 17%;
+  margin-top: 11px;
+  left: 28%;
   font-size: 30px;
   font-weight: bold;
 }
@@ -205,7 +205,7 @@ button a{
   max-height: 100%;
   display: inline-block;
   float: left;
-  margin-right: 15%;
+  margin-right: 24%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
@@ -213,14 +213,7 @@ button a{
   z-index: 1;
 }
 
-#box {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-}
 #photo-box:hover #box {
-  transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
   background: #9aa083;
 

@@ -10,7 +10,6 @@ class User extends React.Component {
       paintSelected: null,
       paintsShown: []
     }
-  // this.sortPaints = this.sortPaints.bind(this)
   this.handleClick = this.handleClick.bind(this)
   }
   componentDidMount() {
@@ -41,15 +40,6 @@ class User extends React.Component {
       this.setState({paintSelected: null})
     }
   }
-
-  // sortPaints(event){
-  //   let selectedCategory = this.state.paints.filter((paint) => {
-  //     return (
-  //       parseInt(paint.category) == event.target.value
-  //     )
-  //   })
-  //   this.setState({ paintsShown: selectedCategory })
-  // }
 
  render(){
    let paints = this.state.paintsShown.map((paint)=>{
@@ -83,7 +73,6 @@ class User extends React.Component {
     <div>
       <div id="header-bckg">
         <div id="text-photo">
-          <h1>Welcome to Boston Painting</h1>
         </div>
       </div>
       {paints}
