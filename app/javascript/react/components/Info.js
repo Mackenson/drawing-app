@@ -10,7 +10,7 @@ const Info = (props) => {
           <span className="hover"><img  id="paint-img" src={props.photo} /></span>
           <span className="back">{props.description}</span>
         </div>
-        <button>
+        <button id="btn-paint">
           <Link to={`/paints/${props.id}`} >
           Add Review
           </Link>

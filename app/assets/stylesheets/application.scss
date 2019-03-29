@@ -143,6 +143,7 @@ ul li:hover ul li{
 #paint-img{
   width: 75%;
   height: 550px;
+  margin: 0 13%;
 }
 .rb{
   margin-top: 11px;
@@ -198,35 +199,12 @@ button a{
   display: inline-block;
 }
 
-
-#photo-box{
-  text-align: center;
-  width: 50%;
-  max-height: 100%;
-  display: inline-block;
-  float: left;
-  margin-right: 24%;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-  position: relative;
-  z-index: 1;
-}
-
 #photo-box:hover #box {
   box-shadow: -5px 5px 5px #aaa;
   background: #9aa083;
 
 }
 
-.back {
-  display: block;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
 .review-form{
   width: 80%;
   margin: 0 8%;
@@ -269,4 +247,22 @@ h2{
 
 img #icon{
   max-width: 3rem;
+}
+img{
+  padding-top: 16px;
+}
+.box-title{
+  margin-bottom: -15px;
+  text-align: center;
+}
+#display{
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+}
+.paint-tile-items{
+  flex: 1 0 45%;
+}
+#btn-paint{
+  margin: 6px 40%;
 }

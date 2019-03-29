@@ -75,7 +75,9 @@ class User extends React.Component {
         <div id="text-photo">
         </div>
       </div>
-      {paints}
+      <div id="display">
+        {paints}
+      </div>
     </div>
   )
 }
