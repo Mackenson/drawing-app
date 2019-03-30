@@ -1,9 +1,11 @@
 <!-- <header id="header-bckg"></header> -->
 
 <% @paints.each do |paint| %>
-  <div id="paint-box">
-  <img src= <%= paint.photo.url %> />
-  <button class="rb"><%= link_to "deleted", paint_path(paint.id), :method=> :delete %></button>
-  <button class="rb"><%= link_to "edit", edit_paint_path(paint.id) %></button>
-</div>
+  <%- if paint.user_id === current_user.id -%>
+    <div id="paint-box">
+    <img src= <%= paint.photo.url %> />
+    <button class="rb"><%= link_to "deleted", paint_path(paint.id), :method=> :delete %></button>
+    <button class="rb"><%= link_to "edit", edit_paint_path(paint.id) %></button>
+  </div>
+  <%- end -%>
 <% end %>
