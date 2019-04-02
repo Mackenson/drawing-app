@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
 
   resources :videos, only: [:index]
+  resources :about, only: [:index]
 end
